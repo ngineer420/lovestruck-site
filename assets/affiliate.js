@@ -9,6 +9,10 @@
  * Until a real tag is added, links point at a plain (non-affiliate) Amazon
  * search URL so the site stays 100% functional before Associates approval.
  *
+ * Every link uses amazonTagGlobal by default -- no per-entry opt-in needed.
+ * An entry only needs its own "tag" field if it should override the global
+ * one (e.g. a different Associates tag or affiliate program).
+ *
  * No third-party requests, no cookies, no analytics.
  */
 (function () {
@@ -26,7 +30,7 @@
       }
 
       var url = entry.url;
-      var tag = entry.tag || (entry.useGlobalTag ? globalTag : null);
+      var tag = entry.tag || globalTag;
       var hasRealTag = tag && tag.indexOf("REPLACE_WITH_YOUR_TAG") === -1;
 
       if (hasRealTag) {

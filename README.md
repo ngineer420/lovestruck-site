@@ -51,8 +51,9 @@ attribute. This means:
    ```json
    "amazonTagGlobal": "yourname-20",
    ```
-   Every link entry has `"useGlobalTag": true`, so this single change updates
-   every affiliate link on the entire site at once.
+   Every link entry uses this tag automatically — no per-entry setting
+   needed — so this single change updates every affiliate link on the
+   entire site at once.
 4. (Optional) If you ever want a specific link to use a *different* tag or
    program (e.g. a non-Amazon affiliate program), add a `"tag"` field to that
    specific entry — it takes priority over the global tag for that one link.
@@ -66,7 +67,8 @@ attribute. This means:
 ### Adding a new affiliate link to an article
 
 1. Add a new entry to the `"links"` object in `affiliate-links.json` with a
-   unique key, a `"label"`, a `"url"`, and `"useGlobalTag": true`.
+   unique key, a `"label"`, and a `"url"`. It picks up `amazonTagGlobal`
+   automatically — no extra field required.
 2. In the article HTML, add:
    ```html
    <a class="affiliate-link" data-affiliate="your-new-key">Link text</a>

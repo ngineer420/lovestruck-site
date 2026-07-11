@@ -1,128 +1,104 @@
 {
   "_readme": "Central affiliate link map for lovestruck.us. Edit ONLY the values below — do not rename the keys, since articles reference them by key via data-affiliate=\"key\" attributes. URLs are Amazon search queries for a specific, well-regarded product rather than a bare category search or a hardcoded product page — this keeps links precise without going dead when a specific listing is discontinued. See README.md in the repo root for full swap-in instructions once your Amazon Associates account is approved.",
 
-  "amazonTagGlobal": "REPLACE_WITH_YOUR_TAG-20",
+  "amazonTagGlobal": "ngineer420-20",
 
   "links": {
     "date-night-kit": {
       "label": "DateBox Club Date Night Subscription",
-      "url": "https://www.amazon.com/s?k=DateBox+Club+date+night+subscription+box",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=DateBox+Club+date+night+subscription+box"
     },
     "board-game-bundle": {
       "label": "Codenames Duet (Two-Player Game)",
-      "url": "https://www.amazon.com/s?k=Codenames+Duet+board+game",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Codenames+Duet+board+game"
     },
     "picnic-set": {
       "label": "Picnic at Ascot Insulated Backpack for Two",
-      "url": "https://www.amazon.com/s?k=Picnic+at+Ascot+insulated+picnic+backpack+for+two",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Picnic+at+Ascot+insulated+picnic+backpack+for+two"
     },
     "polaroid-camera": {
       "label": "Fujifilm Instax Mini 12",
-      "url": "https://www.amazon.com/s?k=Fujifilm+Instax+Mini+12+instant+camera",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Fujifilm+Instax+Mini+12+instant+camera"
     },
     "paper-anniversary-gift": {
       "label": "Under Lucky Stars Personalized Star Map",
-      "url": "https://www.amazon.com/s?k=Under+Lucky+Stars+personalized+star+map+print",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Under+Lucky+Stars+personalized+star+map+print"
     },
     "wood-anniversary-gift": {
       "label": "Kate Posh Engraved Wood Anniversary Frame",
-      "url": "https://www.amazon.com/s?k=Kate+Posh+engraved+wood+anniversary+picture+frame",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Kate+Posh+engraved+wood+anniversary+picture+frame"
     },
     "leather-anniversary-gift": {
       "label": "Galen Leather Handmade Leather Journal",
-      "url": "https://www.amazon.com/s?k=Galen+Leather+handmade+leather+journal",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Galen+Leather+handmade+leather+journal"
     },
     "silver-anniversary-gift": {
       "label": "Pandora Moments Sterling Silver Gift Set",
-      "url": "https://www.amazon.com/s?k=Pandora+Moments+sterling+silver+jewelry+gift+set",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Pandora+Moments+sterling+silver+jewelry+gift+set"
     },
     "long-distance-lamp": {
       "label": "Friendship Lamp by Filimin",
-      "url": "https://www.amazon.com/s?k=Friendship+Lamp+by+Filimin+long+distance+touch+lamp",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Friendship+Lamp+by+Filimin+long+distance+touch+lamp"
     },
     "shared-journal": {
       "label": "Promptly Journals Love Story Journal",
-      "url": "https://www.amazon.com/s?k=Promptly+Journals+Love+Story+couples+journal",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Promptly+Journals+Love+Story+couples+journal"
     },
     "video-doorbell-surprise": {
       "label": "Mixbook Custom Photo Book",
-      "url": "https://www.amazon.com/s?k=Mixbook+photo+book+gift+card",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Mixbook+photo+book+gift+card"
     },
     "engagement-ring-insurance": {
       "label": "NIUPIKA Ring Sizer Measuring Kit",
-      "url": "https://www.amazon.com/s?k=NIUPIKA+ring+sizer+measuring+tool+kit",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=NIUPIKA+ring+sizer+measuring+tool+kit"
     },
     "proposal-photographer-marketplace": {
       "label": "JBL Flip 7 Portable Bluetooth Speaker",
-      "url": "https://www.amazon.com/s?k=JBL+Flip+7+portable+bluetooth+speaker",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=JBL+Flip+7+portable+bluetooth+speaker"
     },
     "candle-gift-set": {
       "label": "Brooklyn Candle Studio Love Potion Candle",
-      "url": "https://www.amazon.com/s?k=Brooklyn+Candle+Studio+Love+Potion+candle",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Brooklyn+Candle+Studio+Love+Potion+candle"
     },
     "spa-gift-set": {
       "label": "Farmers Body Spa Day at Home Gift Set",
-      "url": "https://www.amazon.com/s?k=Farmers+Body+Spa+Day+at+Home+Gift+Set",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Farmers+Body+Spa+Day+at+Home+Gift+Set"
     },
     "valentines-flowers": {
       "label": "Eternal Roses Preserved Rose Box",
-      "url": "https://www.amazon.com/s?k=Eternal+Roses+preserved+rose+box",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Eternal+Roses+preserved+rose+box"
     },
     "love-letter-stationery": {
       "label": "Peter Pauper Press Letter Perfect Stationery Set",
-      "url": "https://www.amazon.com/s?k=Peter+Pauper+Press+Letter+Perfect+stationery+set",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Peter+Pauper+Press+Letter+Perfect+stationery+set"
     },
     "weighted-blanket": {
       "label": "YnM Weighted Blanket",
-      "url": "https://www.amazon.com/s?k=YnM+Weighted+Blanket",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=YnM+Weighted+Blanket"
     },
     "meal-kit-subscription": {
       "label": "HelloFresh Gift Card",
-      "url": "https://www.amazon.com/s?k=HelloFresh+gift+card",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=HelloFresh+gift+card"
     },
     "conversation-starter-cards": {
       "label": "TableTopics Couples Conversation Starter Cards",
-      "url": "https://www.amazon.com/s?k=TableTopics+Couples+conversation+starter+cards",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=TableTopics+Couples+conversation+starter+cards"
     },
     "couples-question-card-deck": {
       "label": "We're Not Really Strangers: Couples Edition",
-      "url": "https://www.amazon.com/s?k=We%27re+Not+Really+Strangers+Couples+Edition+card+game",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=We%27re+Not+Really+Strangers+Couples+Edition+card+game"
     },
     "relationship-workbook": {
       "label": "The Couples Therapy Workbook",
-      "url": "https://www.amazon.com/s?k=The+Couples+Therapy+Workbook+Kathleen+Mates-Youngman",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=The+Couples+Therapy+Workbook+Kathleen+Mates-Youngman"
     },
     "moving-labeling-kit": {
       "label": "BoxOps Label Hero Color-Coded Moving Labels",
-      "url": "https://www.amazon.com/s?k=BoxOps+Label+Hero+color+coded+moving+labels",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=BoxOps+Label+Hero+color+coded+moving+labels"
     },
     "personalized-birthday-gift": {
       "label": "Duncan & Stone Birthday Keepsake Book",
-      "url": "https://www.amazon.com/s?k=Duncan+and+Stone+Birthday+Book+keepsake",
-      "useGlobalTag": true
+      "url": "https://www.amazon.com/s?k=Duncan+and+Stone+Birthday+Book+keepsake"
     }
   }
 }
