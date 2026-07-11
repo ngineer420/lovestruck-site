@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A wrapped anniversary gift">
+  <rect x="12" y="26" width="40" height="28" fill="#fff" stroke="#b8305f" stroke-width="3"/>
+  <rect x="12" y="26" width="40" height="10" fill="#fbeef1" stroke="#b8305f" stroke-width="3"/>
+  <line x1="32" y1="26" x2="32" y2="54" stroke="#7d1f42" stroke-width="3"/>
+  <path d="M32 26 C26 18 18 18 20 12 C24 10 30 16 32 26 Z" fill="#c99a4a"/>
+  <path d="M32 26 C38 18 46 18 44 12 C40 10 34 16 32 26 Z" fill="#c99a4a"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="String lights, a heart, and two glasses toasting on a date">
+  <path d="M40 30 Q320 -10 600 30" fill="none" stroke="#c99a4a" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round"/>
+  <circle cx="120" cy="18" r="4" fill="#c99a4a"/>
+  <circle cx="240" cy="4" r="4" fill="#c99a4a"/>
+  <circle cx="400" cy="4" r="4" fill="#c99a4a"/>
+  <circle cx="520" cy="18" r="4" fill="#c99a4a"/>
+
+  <path d="M320 150 C260 110 260 60 300 55 C315 53 320 68 320 68 C320 68 325 53 340 55 C380 60 380 110 320 150 Z" fill="#b8305f"/>
+
+  <g transform="translate(230,160) rotate(-12)">
+    <path d="M-14 -35 L14 -35 L7 20 L-7 20 Z" fill="none" stroke="#7d1f42" stroke-width="4" stroke-linejoin="round"/>
+    <line x1="0" y1="20" x2="0" y2="34" stroke="#7d1f42" stroke-width="4"/>
+    <line x1="-10" y1="34" x2="10" y2="34" stroke="#7d1f42" stroke-width="4"/>
+  </g>
+  <g transform="translate(410,160) rotate(12)">
+    <path d="M-14 -35 L14 -35 L7 20 L-7 20 Z" fill="none" stroke="#c99a4a" stroke-width="4" stroke-linejoin="round"/>
+    <line x1="0" y1="20" x2="0" y2="34" stroke="#c99a4a" stroke-width="4"/>
+    <line x1="-10" y1="34" x2="10" y2="34" stroke="#c99a4a" stroke-width="4"/>
+  </g>
+</svg>

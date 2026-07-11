@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A heart wrapped like a gift">
+  <path d="M32 50 C10 34 10 16 24 14 C30 13 32 20 32 20 C32 20 34 13 40 14 C54 16 54 34 32 50 Z" fill="#b8305f"/>
+  <line x1="32" y1="16" x2="32" y2="50" stroke="#c99a4a" stroke-width="2.5"/>
+  <path d="M18 27 C24 23 40 23 46 27" fill="none" stroke="#c99a4a" stroke-width="2.5"/>
+</svg>

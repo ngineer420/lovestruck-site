@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="An open ring box with a ring inside">
+  <path d="M12 30 L52 30 L48 50 L16 50 Z" fill="#fff" stroke="#b8305f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M12 30 L18 18 L46 18 L52 30 Z" fill="none" stroke="#7d1f42" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="32" cy="38" r="7" fill="none" stroke="#c99a4a" stroke-width="3"/>
+  <circle cx="32" cy="32" r="2" fill="#c99a4a"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A small handwritten note with a heart">
+  <path d="M14 14 L38 14 L50 26 L50 50 L14 50 Z" fill="#fff" stroke="#b8305f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M38 14 L38 26 L50 26 Z" fill="#fbeef1" stroke="#b8305f" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M32 38 c-2 -3 -7 -1 -6 3 c1 3 6 6 6 6 s5 -3 6 -6 c1 -4 -4 -6 -6 -3 z" fill="#c99a4a"/>
+</svg>
