@@ -88,6 +88,41 @@
       "label": "Letter Writing Stationery Set",
       "url": "https://www.amazon.com/s?k=letter+writing+stationery+set",
       "useGlobalTag": true
+    },
+    "weighted-blanket": {
+      "label": "Weighted Blanket",
+      "url": "https://www.amazon.com/s?k=weighted+blanket",
+      "useGlobalTag": true
+    },
+    "meal-kit-subscription": {
+      "label": "Meal Kit Subscription",
+      "url": "https://www.amazon.com/s?k=meal+kit+delivery+subscription",
+      "useGlobalTag": true
+    },
+    "conversation-starter-cards": {
+      "label": "Conversation Starter Card Deck",
+      "url": "https://www.amazon.com/s?k=conversation+starter+cards+for+couples",
+      "useGlobalTag": true
+    },
+    "couples-question-card-deck": {
+      "label": "Couples Question Card Deck",
+      "url": "https://www.amazon.com/s?k=couples+question+card+deck",
+      "useGlobalTag": true
+    },
+    "relationship-workbook": {
+      "label": "Relationship Workbook for Couples",
+      "url": "https://www.amazon.com/s?k=relationship+workbook+for+couples",
+      "useGlobalTag": true
+    },
+    "moving-labeling-kit": {
+      "label": "Moving Box Labeling Kit",
+      "url": "https://www.amazon.com/s?k=moving+box+labeling+kit",
+      "useGlobalTag": true
+    },
+    "personalized-birthday-gift": {
+      "label": "Personalized Birthday Keepsake Gift",
+      "url": "https://www.amazon.com/s?k=personalized+birthday+keepsake+gift",
+      "useGlobalTag": true
     }
   }
 }

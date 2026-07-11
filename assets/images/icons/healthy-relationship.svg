@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A heart with a heartbeat pulse line through it">
+  <path d="M32 50 C10 34 8 20 20 14 C26 11 32 16 32 22 C32 16 38 11 44 14 C56 20 54 34 32 50 Z" fill="#fbeef1" stroke="#b8305f" stroke-width="3" stroke-linejoin="round"/>
+  <polyline points="14,30 22,30 26,22 30,38 34,26 38,30 50,30" fill="none" stroke="#7d1f42" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

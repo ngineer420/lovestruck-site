@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="An open book with a heart rising from the pages">
+  <path d="M32 20 C28 14 16 14 12 18 L12 46 C16 42 28 42 32 48 Z" fill="#fff" stroke="#b8305f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M32 20 C36 14 48 14 52 18 L52 46 C48 42 36 42 32 48 Z" fill="#fff" stroke="#c99a4a" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="32" y1="20" x2="32" y2="48" stroke="#7d1f42" stroke-width="2"/>
+  <path d="M32 24 c-2 -3 -7 -1 -6 3 c1 3 6 6 6 6 s5 -3 6 -6 c1 -4 -4 -6 -6 -3 z" fill="#b8305f"/>
+</svg>
