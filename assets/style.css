@@ -239,3 +239,29 @@ blockquote {
   color: var(--muted);
   font-style: italic;
 }
+
+/* Freshness signal on article meta line */
+.updated {
+  color: var(--gold);
+}
+
+/* FAQ section */
+.faq { margin-top: 34px; }
+.faq-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #f0dbe2;
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 { margin: 0 0 6px; }
+.faq-item p { margin: 0; }
+
+/* Related articles block */
+.related-articles {
+  margin-top: 34px;
+  background: var(--blush);
+  border: 1px solid #f2d3dc;
+  border-radius: var(--radius);
+  padding: 18px 22px 20px;
+}
+.related-articles h2 { margin-top: 0; }
+.related-articles ul { margin-bottom: 0; }
