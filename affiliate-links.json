@@ -1,7 +1,7 @@
 {
   "_readme": "Central affiliate link map for lovestruck.us. Edit ONLY the values below — do not rename the keys, since articles reference them by key via data-affiliate=\"key\" attributes. URLs are Amazon search queries for a specific, well-regarded product rather than a bare category search or a hardcoded product page — this keeps links precise without going dead when a specific listing is discontinued. See README.md in the repo root for full swap-in instructions once your Amazon Associates account is approved.",
 
-  "amazonTagGlobal": "REPLACE_WITH_YOUR_TAG-20",
+  "amazonTagGlobal": "ngineer420-20",
 
   "links": {
     "date-night-kit": {
