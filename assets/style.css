@@ -1,0 +1,200 @@
+/* Lovestruck.us — base styles
+   No external fonts, no frameworks, no tracking. */
+
+:root {
+  --rose: #b8305f;
+  --rose-dark: #7d1f42;
+  --blush: #fbeef1;
+  --cream: #fffaf6;
+  --ink: #2b1e22;
+  --muted: #6b5a5f;
+  --gold: #c99a4a;
+  --radius: 14px;
+  --max-width: 780px;
+  font-size: 17px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+  color: #fff;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+.site-header .wrap {
+  max-width: 980px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.brand {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.brand span { color: #ffd9e6; font-weight: 400; }
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 0.92rem;
+}
+
+.site-header nav a {
+  color: #ffe9ef;
+  text-decoration: none;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+.site-header nav a:hover { border-bottom-color: #ffd9e6; }
+
+/* Hero */
+.hero {
+  background: var(--blush);
+  padding: 48px 0 40px;
+  text-align: center;
+  border-bottom: 1px solid #f2d3dc;
+}
+.hero h1 { font-size: 2.1rem; margin: 0 0 12px; color: var(--rose-dark); }
+.hero p { max-width: 560px; margin: 0 auto; color: var(--muted); font-size: 1.05rem; }
+
+/* Main content */
+main { padding: 40px 0 60px; }
+main.wrap { max-width: var(--max-width); }
+
+article h1 { font-size: 1.9rem; color: var(--rose-dark); margin-bottom: 6px; }
+article .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+article h2 { font-size: 1.35rem; color: var(--rose-dark); margin-top: 34px; }
+article h3 { font-size: 1.1rem; color: var(--rose-dark); margin-top: 24px; }
+article p, article li { color: #3a2a2f; }
+article ul, article ol { padding-left: 22px; }
+
+.disclosure-note {
+  background: #fff4e9;
+  border: 1px solid #eddac0;
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: #6b4c1f;
+  margin: 18px 0 28px;
+}
+
+/* Affiliate link styling */
+.affiliate-link, a.affiliate-link {
+  color: var(--rose);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #e7b9c9;
+}
+.affiliate-link:hover { color: var(--rose-dark); }
+.affiliate-tag {
+  font-size: 0.72rem;
+  vertical-align: super;
+  color: var(--gold);
+  margin-left: 2px;
+}
+
+/* Article grid on homepage */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 34px;
+}
+@media (max-width: 620px) {
+  .article-grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #f0dbe2;
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  text-decoration: none;
+  color: var(--ink);
+  display: block;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(184,48,95,0.14); }
+.card h3 { margin: 0 0 8px; color: var(--rose-dark); font-size: 1.1rem; }
+.card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.card .tag {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Simple page (about/privacy/disclosure) */
+.page h1 { color: var(--rose-dark); }
+
+/* Footer */
+.site-footer {
+  background: #2b1e22;
+  color: #cbb7bd;
+  padding: 28px 0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+.site-footer a { color: #f2c9d6; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.site-footer p { margin: 6px 0; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--rose);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.btn:hover { background: var(--rose-dark); }
+
+/* Table used in gift-by-year guide */
+table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.92rem; }
+table caption { text-align: left; color: var(--muted); margin-bottom: 6px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #ecdde1; vertical-align: top; }
+th { color: var(--rose-dark); }
+
+blockquote {
+  border-left: 4px solid var(--rose);
+  margin: 20px 0;
+  padding: 4px 18px;
+  color: var(--muted);
+  font-style: italic;
+}

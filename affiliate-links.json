@@ -1,0 +1,93 @@
+{
+  "_readme": "Central affiliate link map for lovestruck.us. Edit ONLY the values below — do not rename the keys, since articles reference them by key via data-affiliate=\"key\" attributes. See README.md in the repo root for full swap-in instructions once your Amazon Associates account is approved.",
+
+  "amazonTagGlobal": "REPLACE_WITH_YOUR_TAG-20",
+
+  "links": {
+    "date-night-kit": {
+      "label": "Date Night Subscription Box",
+      "url": "https://www.amazon.com/s?k=date+night+subscription+box",
+      "useGlobalTag": true
+    },
+    "board-game-bundle": {
+      "label": "Two-Player Board Game Bundle",
+      "url": "https://www.amazon.com/s?k=two+player+board+games",
+      "useGlobalTag": true
+    },
+    "picnic-set": {
+      "label": "Outdoor Picnic Set",
+      "url": "https://www.amazon.com/s?k=picnic+basket+set+for+two",
+      "useGlobalTag": true
+    },
+    "polaroid-camera": {
+      "label": "Instant Print Camera",
+      "url": "https://www.amazon.com/s?k=instant+print+camera",
+      "useGlobalTag": true
+    },
+    "paper-anniversary-gift": {
+      "label": "Personalized Paper Anniversary Print",
+      "url": "https://www.amazon.com/s?k=personalized+first+anniversary+paper+gift",
+      "useGlobalTag": true
+    },
+    "wood-anniversary-gift": {
+      "label": "Engraved Wood Anniversary Keepsake",
+      "url": "https://www.amazon.com/s?k=engraved+wood+anniversary+gift",
+      "useGlobalTag": true
+    },
+    "leather-anniversary-gift": {
+      "label": "Leather Travel Journal",
+      "url": "https://www.amazon.com/s?k=leather+travel+journal+couple",
+      "useGlobalTag": true
+    },
+    "silver-anniversary-gift": {
+      "label": "Sterling Silver Jewelry Set",
+      "url": "https://www.amazon.com/s?k=sterling+silver+jewelry+anniversary+gift",
+      "useGlobalTag": true
+    },
+    "long-distance-lamp": {
+      "label": "Friendship / Long-Distance Touch Lamp",
+      "url": "https://www.amazon.com/s?k=long+distance+touch+lamp+for+couples",
+      "useGlobalTag": true
+    },
+    "shared-journal": {
+      "label": "Shared Couples Journal",
+      "url": "https://www.amazon.com/s?k=couples+shared+journal+prompts",
+      "useGlobalTag": true
+    },
+    "video-doorbell-surprise": {
+      "label": "Photo Book Printing Service",
+      "url": "https://www.amazon.com/s?k=custom+photo+book",
+      "useGlobalTag": true
+    },
+    "engagement-ring-insurance": {
+      "label": "Ring Sizer Kit",
+      "url": "https://www.amazon.com/s?k=ring+sizer+kit",
+      "useGlobalTag": true
+    },
+    "proposal-photographer-marketplace": {
+      "label": "Portable Bluetooth Speaker (for the proposal playlist)",
+      "url": "https://www.amazon.com/s?k=portable+bluetooth+speaker",
+      "useGlobalTag": true
+    },
+    "candle-gift-set": {
+      "label": "Romantic Candle Gift Set",
+      "url": "https://www.amazon.com/s?k=romantic+candle+gift+set",
+      "useGlobalTag": true
+    },
+    "spa-gift-set": {
+      "label": "At-Home Couples Spa Kit",
+      "url": "https://www.amazon.com/s?k=at+home+couples+spa+kit",
+      "useGlobalTag": true
+    },
+    "valentines-flowers": {
+      "label": "Preserved / Everlasting Rose Box",
+      "url": "https://www.amazon.com/s?k=preserved+rose+box",
+      "useGlobalTag": true
+    },
+    "love-letter-stationery": {
+      "label": "Letter Writing Stationery Set",
+      "url": "https://www.amazon.com/s?k=letter+writing+stationery+set",
+      "useGlobalTag": true
+    }
+  }
+}
