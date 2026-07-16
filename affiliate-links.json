@@ -123,6 +123,16 @@
       "label": "Duncan & Stone Birthday Keepsake Book",
       "url": "https://www.amazon.com/s?k=Duncan+and+Stone+Birthday+Book+keepsake",
       "useGlobalTag": true
+    },
+    "mini-projector": {
+      "label": "KODAK Luma 150 Portable Mini Projector",
+      "url": "https://www.amazon.com/s?k=KODAK+Luma+150+portable+mini+projector",
+      "useGlobalTag": true
+    },
+    "fountain-pen": {
+      "label": "LAMY Safari Fountain Pen",
+      "url": "https://www.amazon.com/s?k=LAMY+Safari+fountain+pen",
+      "useGlobalTag": true
     }
   }
 }

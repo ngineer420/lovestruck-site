@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A crescent moon over two mugs">
+  <path d="M40 10 a12 12 0 1 0 10 18 a10 10 0 0 1 -10 -18 z" fill="none" stroke="#c99a4a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M14 38 L30 38 L28 54 L16 54 Z" fill="none" stroke="#b8305f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M34 38 L50 38 L48 54 L36 54 Z" fill="none" stroke="#7d1f42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M22 32 c-1.5 -2.2 -5 -0.7 -4.4 2.2 c0.7 2.2 4.4 4.4 4.4 4.4 s3.7 -2.2 4.4 -4.4 c0.7 -2.9 -2.9 -4.4 -4.4 -2.2 z" fill="#b8305f" transform="translate(0,-6)"/>
+</svg>
