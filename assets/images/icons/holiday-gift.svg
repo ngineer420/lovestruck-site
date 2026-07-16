@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A wrapped gift box with a heart tag">
+  <rect x="12" y="26" width="40" height="26" rx="2" fill="#fff" stroke="#b8305f" stroke-width="3"/>
+  <line x1="32" y1="26" x2="32" y2="52" stroke="#c99a4a" stroke-width="3"/>
+  <path d="M12 26 h40" stroke="#b8305f" stroke-width="3"/>
+  <path d="M32 26 c-6 -2 -12 -6 -10 -11 c2 -4 8 -2 10 3 c2 -5 8 -7 10 -3 c2 5 -4 9 -10 11 z" fill="none" stroke="#c99a4a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M44 36 c-1.5 -2.2 -5 -0.7 -4.4 2.2 c0.7 2.2 4.4 4.4 4.4 4.4 s3.7 -2.2 4.4 -4.4 c0.7 -2.9 -2.9 -4.4 -4.4 -2.2 z" fill="#7d1f42"/>
+</svg>

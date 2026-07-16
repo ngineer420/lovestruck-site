@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="An envelope sealed with a heart">
+  <rect x="10" y="18" width="44" height="30" rx="3" fill="#fff" stroke="#b8305f" stroke-width="3"/>
+  <path d="M10 21 L32 38 L54 21" fill="none" stroke="#c99a4a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M32 26 c-2 -3 -7 -1 -6 3 c1 3 6 6 6 6 s5 -3 6 -6 c1 -4 -4 -6 -6 -3 z" fill="#7d1f42"/>
+</svg>

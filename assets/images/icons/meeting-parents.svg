@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A house with a heart above the door">
+  <path d="M12 30 L32 14 L52 30 L52 52 L12 52 Z" fill="none" stroke="#b8305f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M26 52 L26 38 L38 38 L38 52" fill="none" stroke="#c99a4a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M32 24 c-2 -3 -7 -1 -6 3 c1 3 6 6 6 6 s5 -3 6 -6 c1 -4 -4 -6 -6 -3 z" fill="#b8305f"/>
+</svg>

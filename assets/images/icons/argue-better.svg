@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Two speech bubbles, one holding a heart">
+  <path d="M8 14 h26 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-14 l-8 8 v-8 h-4 a4 4 0 0 1 -4 -4 v-12 a4 4 0 0 1 4 -4 z" fill="#fff" stroke="#b8305f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M30 34 h22 a4 4 0 0 1 4 4 v10 a4 4 0 0 1 -4 4 h-4 v7 l-7 -7 h-11 a4 4 0 0 1 -4 -4 v-10 a4 4 0 0 1 4 -4 z" fill="#fff" stroke="#c99a4a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M21 20 c-1.7 -2.5 -5.8 -0.8 -5 2.5 c0.8 2.5 5 5 5 5 s4.2 -2.5 5 -5 c0.8 -3.3 -3.3 -5 -5 -2.5 z" fill="#b8305f"/>
+  <path d="M41 39 c-1.7 -2.5 -5.8 -0.8 -5 2.5 c0.8 2.5 5 5 5 5 s4.2 -2.5 5 -5 c0.8 -3.3 -3.3 -5 -5 -2.5 z" fill="#c99a4a"/>
+</svg>
