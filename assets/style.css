@@ -9,12 +9,110 @@
   --ink: #2b1e22;
   --muted: #6b5a5f;
   --gold: #c99a4a;
+
+  /* --rose-dark was doing three jobs that pull apart in a dark theme: the foot
+     of the header gradient, the fill of a button with white text on it, and
+     the colour of headings sitting on the page. On a dark page the headings
+     have to go lighter while a ground behind white text has to stay dark, so
+     those grounds are named separately. All of them still resolve to the same
+     two roses here, so light output is unchanged. */
+  --chrome-a: var(--rose);          /* head of the header gradient */
+  --chrome-b: var(--rose-dark);     /* foot of it */
+  --btn-bg: var(--rose);
+  --btn-bg-hover: var(--rose-dark);
+  --btn-ink: #ffffff;
+
+  /* Colours that used to be written as literals in the rules below. Same
+     values, named so the dark block can move them. */
+  --ink-body: #3a2a2f;              /* article body copy, a touch softer than --ink */
+  --card-bg: #ffffff;
+  --rose-line: #f0dbe2;             /* card and FAQ rules */
+  --rose-line-soft: #ecdde1;        /* table rules */
+  --rose-faint: #e7b9c9;            /* affiliate-link underline */
+  --blush-line: #f2d3dc;            /* edge of anything sitting on --blush */
+  --on-chrome: #ffffff;             /* brand and header text */
+  --on-chrome-nav: #ffe9ef;         /* header nav links */
+  --on-chrome-soft: #ffd9e6;        /* ".us", nav hover rule */
+  --notice-bg: #fff4e9;
+  --notice-line: #eddac0;
+  --notice-ink: #6b4c1f;
+  --footer-bg: #2b1e22;
+  --footer-ink: #cbb7bd;
+  --footer-link: #f2c9d6;
+
   --radius: 14px;
   --max-width: 780px;
   font-size: 17px;
+  color-scheme: light;
+}
+
+/* Dark theme.
+   This is a long-form reading site, which is exactly the case where somebody
+   reading at night wants the lights down. Colours are redefined here and
+   nowhere else, so the two themes cannot drift, and this block moves colour
+   only — font-size, --radius and --max-width are deliberately not repeated.
+
+   --rose-dark means the *stronger* rose: on cream that is darker, on a dark
+   page it has to be lighter, so the two roses swap which of them is brighter.
+   The grounds that carry white text (--chrome-*, --btn-*) do not swap, which
+   is exactly why they were split out above. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rose: #e2708f;
+    --rose-dark: #f3a1bb;
+    --blush: #241a1e;
+    --cream: #1b1417;
+    --ink: #ece1e4;
+    --muted: #a9979d;
+    --gold: #d9ad63;
+
+    --chrome-a: #6d1c39;
+    --chrome-b: #451224;
+    --btn-bg: #c73f6d;
+    --btn-bg-hover: #a82a55;
+    --btn-ink: #ffffff;
+
+    --ink-body: #ded2d6;
+    --card-bg: #221a1d;
+    --rose-line: #3a2a30;
+    --rose-line-soft: #33252a;
+    --rose-faint: #7a3a4d;
+    --blush-line: #3c2b32;
+    --on-chrome: #ffeef4;
+    --on-chrome-nav: #f6d7e1;
+    --on-chrome-soft: #f0b9cd;
+    --notice-bg: #2b2114;
+    --notice-line: #4d3d20;
+    --notice-ink: #e2c894;
+    --footer-bg: #150f11;
+    --footer-ink: #b9a7ac;
+    --footer-link: #f0bfd0;
+    color-scheme: dark;
+  }
+
+  /* This stylesheet never set a colour for a plain in-content link, so they
+     fall back to the browser's default #0000ee. On cream that is merely
+     off-palette; on the dark ground it is about 1.6:1 and unreadable. Given a
+     colour only in here, so the light theme is left exactly as it was.
+     .affiliate-link, .site-header nav a, .site-footer a and .card all carry a
+     class and so still win over this. */
+  a { color: var(--rose-dark); }
 }
 
 * { box-sizing: border-box; }
+
+/* Keyboard focus was invisible, which on a page whose main interactive
+   elements are affiliate links makes the whole site unnavigable without a
+   mouse. :focus-visible rather than :focus so a mouse click doesn't ring the
+   link it just activated. The rose reads against the cream page and against
+   the dark one, because the token moves with the theme; on the rose header
+   and the near-black footer it would not, so those get their own. */
+:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 2px;
+}
+.site-header :focus-visible { outline-color: var(--on-chrome); }
+.site-footer :focus-visible { outline-color: var(--footer-link); }
 
 html, body {
   margin: 0;
@@ -35,8 +133,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Header */
 .site-header {
-  background: linear-gradient(135deg, var(--rose), var(--rose-dark));
-  color: #fff;
+  background: linear-gradient(135deg, var(--chrome-a), var(--chrome-b));
+  color: var(--on-chrome);
   padding: 18px 0;
   position: sticky;
   top: 0;
@@ -54,13 +152,13 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .brand {
-  color: #fff;
+  color: var(--on-chrome);
   font-size: 1.4rem;
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 0.02em;
 }
-.brand span { color: #ffd9e6; font-weight: 400; }
+.brand span { color: var(--on-chrome-soft); font-weight: 400; }
 
 .site-header nav {
   display: flex;
@@ -70,19 +168,19 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-header nav a {
-  color: #ffe9ef;
+  color: var(--on-chrome-nav);
   text-decoration: none;
   padding: 4px 2px;
   border-bottom: 2px solid transparent;
 }
-.site-header nav a:hover { border-bottom-color: #ffd9e6; }
+.site-header nav a:hover { border-bottom-color: var(--on-chrome-soft); }
 
 /* Hero */
 .hero {
   background: var(--blush);
   padding: 48px 0 40px;
   text-align: center;
-  border-bottom: 1px solid #f2d3dc;
+  border-bottom: 1px solid var(--blush-line);
 }
 .hero h1 { font-size: 2.1rem; margin: 0 0 12px; color: var(--rose-dark); }
 .hero p { max-width: 560px; margin: 0 auto; color: var(--muted); font-size: 1.05rem; }
@@ -117,7 +215,7 @@ img { max-width: 100%; height: auto; display: block; }
 .card-icon, .article-icon {
   border-radius: 50%;
   background: var(--blush);
-  border: 1px solid #f2d3dc;
+  border: 1px solid var(--blush-line);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,17 +234,17 @@ article h1 { font-size: 1.9rem; color: var(--rose-dark); margin-bottom: 6px; }
 article .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
 article h2 { font-size: 1.35rem; color: var(--rose-dark); margin-top: 34px; }
 article h3 { font-size: 1.1rem; color: var(--rose-dark); margin-top: 24px; }
-article p, article li { color: #3a2a2f; }
+article p, article li { color: var(--ink-body); }
 article ul, article ol { padding-left: 22px; }
 
 .disclosure-note {
-  background: #fff4e9;
-  border: 1px solid #eddac0;
+  background: var(--notice-bg);
+  border: 1px solid var(--notice-line);
   border-left: 4px solid var(--gold);
   border-radius: 8px;
   padding: 12px 16px;
   font-size: 0.9rem;
-  color: #6b4c1f;
+  color: var(--notice-ink);
   margin: 18px 0 28px;
 }
 
@@ -155,7 +253,7 @@ article ul, article ol { padding-left: 22px; }
   color: var(--rose);
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: #e7b9c9;
+  text-decoration-color: var(--rose-faint);
 }
 .affiliate-link:hover { color: var(--rose-dark); }
 .affiliate-tag {
@@ -177,8 +275,8 @@ article ul, article ol { padding-left: 22px; }
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #f0dbe2;
+  background: var(--card-bg);
+  border: 1px solid var(--rose-line);
   border-radius: var(--radius);
   padding: 20px 22px;
   text-decoration: none;
@@ -203,33 +301,33 @@ article ul, article ol { padding-left: 22px; }
 
 /* Footer */
 .site-footer {
-  background: #2b1e22;
-  color: #cbb7bd;
+  background: var(--footer-bg);
+  color: var(--footer-ink);
   padding: 28px 0;
   font-size: 0.85rem;
   text-align: center;
 }
-.site-footer a { color: #f2c9d6; text-decoration: none; }
+.site-footer a { color: var(--footer-link); text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 .site-footer p { margin: 6px 0; }
 
 /* Buttons */
 .btn {
   display: inline-block;
-  background: var(--rose);
-  color: #fff;
+  background: var(--btn-bg);
+  color: var(--btn-ink);
   padding: 10px 20px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
 }
-.btn:hover { background: var(--rose-dark); }
+.btn:hover { background: var(--btn-bg-hover); }
 
 /* Table used in gift-by-year guide */
 table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.92rem; }
 table caption { text-align: left; color: var(--muted); margin-bottom: 6px; }
-th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #ecdde1; vertical-align: top; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rose-line-soft); vertical-align: top; }
 th { color: var(--rose-dark); }
 
 blockquote {
@@ -249,7 +347,7 @@ blockquote {
 .faq { margin-top: 34px; }
 .faq-item {
   padding: 16px 0;
-  border-bottom: 1px solid #f0dbe2;
+  border-bottom: 1px solid var(--rose-line);
 }
 .faq-item:last-child { border-bottom: none; }
 .faq-item h3 { margin: 0 0 6px; }
@@ -259,7 +357,7 @@ blockquote {
 .related-articles {
   margin-top: 34px;
   background: var(--blush);
-  border: 1px solid #f2d3dc;
+  border: 1px solid var(--blush-line);
   border-radius: var(--radius);
   padding: 18px 22px 20px;
 }
