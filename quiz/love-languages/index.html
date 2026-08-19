@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Languages Quiz — 30 Questions, No Email, Shareable Result | Lovestruck.us</title>
+<meta name="description" content="A free 30-question love languages quiz that ranks all five, gives you a link you can send your partner, and puts your two results side by side. No email, no signup.">
+<link rel="canonical" href="https://lovestruck.us/quiz/love-languages/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lovestruck.us">
+<meta property="og:title" content="Love Languages Quiz — 30 Questions, No Email, Shareable Result">
+<meta property="og:description" content="A free 30-question love languages quiz that ranks all five, gives you a link you can send your partner, and puts your two results side by side. No email, no signup.">
+<meta property="og:url" content="https://lovestruck.us/quiz/love-languages/">
+<meta property="og:image" content="https://lovestruck.us/assets/images/photos/love-languages-hands.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Love Languages Quiz — 30 Questions, No Email, Shareable Result">
+<meta name="twitter:description" content="A free 30-question love languages quiz that ranks all five, gives you a link you can send your partner, and puts your two results side by side.">
+<meta name="twitter:image" content="https://lovestruck.us/assets/images/photos/love-languages-hands.jpg">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fffaf6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1b1417" media="(prefers-color-scheme: dark)">
+<script src="/assets/affiliate.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Love Languages Quiz",
+  "description": "A free 30-question love languages quiz that ranks all five, gives you a shareable result link, and compares your scores with your partner's side by side.",
+  "url": "https://lovestruck.us/quiz/love-languages/",
+  "isPartOf": { "@type": "WebSite", "name": "Lovestruck.us", "url": "https://lovestruck.us/" },
+  "publisher": { "@type": "Organization", "name": "Lovestruck.us" },
+  "inLanguage": "en",
+  "datePublished": "2026-08-19",
+  "dateModified": "2026-08-19"
+}
+</script>
+<style>
+/* Quiz-only styles. Every colour is one of the site tokens from
+   /assets/style.css, so this page follows the light and dark themes without
+   defining a palette of its own. Kept in the page rather than the global
+   stylesheet because nothing else on the site uses any of it. */
+
+.quiz-shell { margin-top: 6px; }
+
+/* .hero p sets its own font-size and beats a lone class, so the attribution
+   line has to name the element to come out smaller than the copy above it. */
+p.quiz-note,
+.hero p.quiz-note {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 14px auto 0;
+  max-width: 560px;
+}
+.hero p.quiz-note {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--blush-line);
+}
+
+/* Progress */
+.q-progress { margin-bottom: 22px; }
+.q-progress-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.q-progress-track {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--blush);
+  border: 1px solid var(--blush-line);
+  overflow: hidden;
+}
+.q-progress-fill {
+  height: 100%;
+  width: 0;
+  background: var(--rose);
+  transition: width 0.2s ease;
+}
+
+/* Question card */
+.q-card {
+  background: var(--card-bg);
+  border: 1px solid var(--rose-line);
+  border-radius: var(--radius);
+  padding: 24px 22px 22px;
+}
+.q-scene {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--rose-dark);
+  line-height: 1.4;
+}
+.q-prompt { margin: 0 0 18px; color: var(--muted); font-size: 0.92rem; }
+
+.q-options { display: grid; gap: 12px; }
+.q-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid var(--rose-line);
+  border-left: 4px solid var(--rose-faint);
+  border-radius: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease, transform 0.12s ease;
+}
+.q-option:hover { border-left-color: var(--rose); background: var(--blush); }
+.q-option:active { transform: translateY(1px); }
+.q-option[aria-pressed="true"] {
+  border-color: var(--rose);
+  border-left-color: var(--rose);
+  background: var(--blush);
+  font-weight: 600;
+}
+
+.q-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.q-linkbtn {
+  font: inherit;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  padding: 4px 2px;
+  color: var(--rose);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--rose-faint);
+}
+.q-linkbtn:hover { color: var(--rose-dark); }
+.q-linkbtn[disabled] { color: var(--muted); cursor: default; text-decoration: none; }
+
+button.btn {
+  font: inherit;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+}
+.btn[disabled] { opacity: 0.5; cursor: default; }
+
+/* Who is answering */
+.q-whostrip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.q-chip {
+  display: inline-block;
+  background: var(--blush);
+  border: 1px solid var(--blush-line);
+  border-radius: 30px;
+  padding: 3px 12px;
+  font-weight: 600;
+  color: var(--rose-dark);
+}
+
+/* Results */
+.q-result-head { margin: 0 0 6px; color: var(--rose-dark); font-size: 1.5rem; }
+.q-result-sub { color: var(--muted); margin-top: 0; }
+
+.q-bars { margin: 22px 0 8px; }
+.q-bar-row { margin-bottom: 16px; }
+.q-bar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+.q-bar-name { font-weight: 600; color: var(--ink); }
+.q-bar-name a { color: inherit; text-decoration: underline; text-decoration-color: var(--rose-faint); }
+.q-bar-name a:hover { color: var(--rose); }
+.q-bar-row.is-top .q-bar-name { color: var(--rose-dark); }
+.q-bar-score { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+.q-bar-track {
+  height: 14px;
+  border-radius: 7px;
+  background: var(--blush);
+  border: 1px solid var(--blush-line);
+  overflow: hidden;
+}
+.q-bar-fill {
+  height: 100%;
+  display: block;
+  background: var(--rose);
+  border-radius: 7px 0 0 7px;
+  transition: width 0.35s ease;
+}
+.q-bar-row.is-top .q-bar-fill { background: linear-gradient(90deg, var(--rose), var(--btn-bg-hover)); }
+
+/* Compare */
+.q-cmp-row { margin-bottom: 20px; }
+.q-cmp-name { font-weight: 600; color: var(--ink); margin-bottom: 6px; font-size: 0.95rem; }
+.q-cmp-line { display: flex; align-items: center; gap: 10px; margin-bottom: 5px; }
+.q-cmp-who { flex: 0 0 88px; font-size: 0.8rem; color: var(--muted); text-align: right; }
+.q-cmp-track {
+  flex: 1 1 auto;
+  height: 12px;
+  border-radius: 6px;
+  background: var(--blush);
+  border: 1px solid var(--blush-line);
+  overflow: hidden;
+}
+.q-cmp-fill { display: block; height: 100%; border-radius: 6px 0 0 6px; }
+.q-cmp-fill.mine { background: var(--rose); }
+.q-cmp-fill.theirs { background: var(--gold); }
+.q-cmp-num { flex: 0 0 34px; font-size: 0.8rem; color: var(--muted); }
+
+.q-key { font-size: 0.82rem; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+.q-key span { display: inline-flex; align-items: center; gap: 6px; }
+.q-swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.q-swatch.mine { background: var(--rose); }
+.q-swatch.theirs { background: var(--gold); }
+
+/* Callout used for the biggest gap and the pH-style lead notes */
+.q-callout {
+  background: var(--blush);
+  border: 1px solid var(--blush-line);
+  border-left: 4px solid var(--rose);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 20px 0;
+}
+.q-callout h3 { margin: 0 0 6px; font-size: 1rem; color: var(--rose-dark); }
+.q-callout p { margin: 0; color: var(--ink-body); font-size: 0.95rem; }
+.q-callout p + p { margin-top: 8px; }
+
+/* Share box */
+.q-share { margin: 24px 0 8px; }
+.q-share h3 { margin: 0 0 6px; font-size: 1rem; color: var(--rose-dark); }
+.q-share p { margin: 0 0 10px; color: var(--muted); font-size: 0.9rem; }
+.q-share-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.q-share-row input {
+  flex: 1 1 240px;
+  min-width: 0;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--rose-line);
+  background: var(--card-bg);
+  color: var(--ink);
+}
+.q-copied { font-size: 0.85rem; color: var(--rose-dark); margin: 8px 0 0; }
+
+.q-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+
+/* Language panels */
+.lang-panels { margin-top: 12px; }
+.lang-panel {
+  border: 1px solid var(--rose-line);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.lang-panel > summary {
+  cursor: pointer;
+  padding: 14px 18px;
+  font-weight: 600;
+  color: var(--rose-dark);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.lang-panel > summary::-webkit-details-marker { display: none; }
+.lang-panel > summary::after {
+  content: "+";
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--rose);
+  flex: 0 0 auto;
+}
+.lang-panel[open] > summary::after { content: "\2212"; }
+.lang-panel > summary:hover { background: var(--blush); }
+.lang-panel-body { padding: 0 18px 16px; }
+.lang-panel-body > p:first-child { margin-top: 0; }
+.lang-panel-body ul { padding-left: 20px; margin-bottom: 0; }
+.lang-panel-body li { margin-bottom: 9px; color: var(--ink-body); }
+
+.q-hidden { display: none; }
+
+@media (max-width: 480px) {
+  .q-card { padding: 20px 16px 18px; }
+  .q-scene { font-size: 1.05rem; }
+  .q-cmp-who { flex-basis: 66px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/index.html">Lovestruck<span>.us</span></a>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/articles/budget-date-night-ideas.html">Date Ideas</a>
+      <a href="/articles/anniversary-gift-guide-by-year.html">Anniversary Gifts</a>
+      <a href="/articles/valentines-day-gift-guide.html">Valentine's Gifts</a>
+      <a href="/articles/long-distance-relationship-tips.html">LDR Tips</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>The Love Languages Quiz</h1>
+    <p>Thirty either-or situations, about four minutes, and a ranked result for all five languages — not just the winner. No email, no account, nothing stored anywhere but your own browser.</p>
+    <p class="quiz-note">The five categories come from <em>The 5 Love Languages</em> by Gary Chapman. This quiz is not affiliated with, endorsed by, or connected to Gary Chapman or his publisher — the questions, scoring and write-ups here are our own.</p>
+  </div>
+</section>
+
+<main class="wrap">
+<article>
+
+<div class="quiz-shell">
+
+  <!-- Shared-result banner, shown only when arriving on a #r= link -->
+  <div id="sharedBanner" class="q-callout q-hidden">
+    <h3>You're looking at someone else's result</h3>
+    <p>These scores came in on the link you followed. Scroll down for what they mean — or <button type="button" class="q-linkbtn" id="startFromShare">take the quiz yourself</button> and the page will put the two side by side.</p>
+  </div>
+
+  <!-- Intro -->
+  <section id="paneIntro">
+    <div class="q-card">
+      <p class="q-scene">Which of the five actually lands for you?</p>
+      <p class="q-prompt">Every question puts two good things against each other and makes you pick one. That's the point — asking "do you like being complimented?" gets a yes from everybody. Forcing a choice is the only way a ranking means anything.</p>
+      <p style="color:var(--ink-body); font-size:0.95rem;">There are no right answers and nothing is scored as better than anything else. Answer for how things actually land, not how you think they should.</p>
+      <div class="q-actions">
+        <button type="button" class="btn" id="btnStart">Start the quiz</button>
+      </div>
+    </div>
+    <p class="quiz-note" style="max-width:none;">Your answers stay in this browser tab. Nothing is sent anywhere, because there is nowhere for it to go — this page has no server behind it.</p>
+  </section>
+
+  <!-- Quiz -->
+  <section id="paneQuiz" class="q-hidden">
+    <div class="q-whostrip">
+      <span>Answering as</span>
+      <span class="q-chip" id="whoChip">you</span>
+      <button type="button" class="q-linkbtn" id="btnQuit">start over</button>
+    </div>
+
+    <div class="q-progress">
+      <div class="q-progress-top">
+        <span id="qCount">Question 1 of 30</span>
+        <span id="qPct">0%</span>
+      </div>
+      <div class="q-progress-track"><div class="q-progress-fill" id="qFill"></div></div>
+    </div>
+
+    <div class="q-card">
+      <p class="q-scene" id="qScene"></p>
+      <p class="q-prompt" id="qPrompt"></p>
+      <div class="q-options" role="group" aria-labelledby="qScene">
+        <button type="button" class="q-option" id="optA" aria-pressed="false"></button>
+        <button type="button" class="q-option" id="optB" aria-pressed="false"></button>
+      </div>
+      <div class="q-nav">
+        <button type="button" class="q-linkbtn" id="btnPrev">&larr; Previous</button>
+        <span style="font-size:0.82rem;color:var(--muted);">Pick one to move on</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Result -->
+  <section id="paneResult" class="q-hidden">
+    <h2 class="q-result-head" id="resHead">Your results</h2>
+    <p class="q-result-sub" id="resSub"></p>
+
+    <div class="q-bars" id="resBars"></div>
+    <p class="quiz-note" style="max-width:none;">Each language came up in 12 of the 30 questions, so 12 is the most any one of them can score and the five always add up to 30. A flat spread is a real result, not a failed one — it means most of these land for you.</p>
+
+    <div id="resNarrative"></div>
+
+    <div class="q-share" id="resShare">
+      <h3>Send this to your partner</h3>
+      <p>The scores travel in the link itself. Opening it shows them exactly this page — then they can take it and the two results get compared.</p>
+      <div class="q-share-row">
+        <input type="text" id="shareUrl" readonly aria-label="Shareable link to your result">
+        <button type="button" class="btn" id="btnCopy">Copy link</button>
+      </div>
+      <p class="q-copied q-hidden" id="copiedMsg">Copied.</p>
+    </div>
+
+    <div class="q-actions">
+      <button type="button" class="btn" id="btnPartner">Take it again as your partner</button>
+      <button type="button" class="q-linkbtn" id="btnRetake">Start over</button>
+    </div>
+  </section>
+
+  <!-- Compare -->
+  <section id="paneCompare" class="q-hidden">
+    <h2 class="q-result-head">Side by side</h2>
+    <p class="q-result-sub" id="cmpSub"></p>
+
+    <div class="q-key">
+      <span><i class="q-swatch mine"></i> <span id="keyMine">You</span></span>
+      <span><i class="q-swatch theirs"></i> <span id="keyTheirs">Your partner</span></span>
+    </div>
+
+    <div id="cmpBars"></div>
+
+    <div id="cmpInsight"></div>
+
+    <div class="q-share">
+      <h3>Keep both results</h3>
+      <p>This link carries both sets of scores, so either of you can reopen this comparison later.</p>
+      <div class="q-share-row">
+        <input type="text" id="cmpShareUrl" readonly aria-label="Shareable link to the comparison">
+        <button type="button" class="btn" id="btnCopy2">Copy link</button>
+      </div>
+      <p class="q-copied q-hidden" id="copiedMsg2">Copied.</p>
+    </div>
+
+    <div class="q-actions">
+      <button type="button" class="q-linkbtn" id="btnRetake2">Start over</button>
+    </div>
+  </section>
+
+</div>
+
+<h2>What to actually do about it</h2>
+<p>A ranking is only worth having if it changes what you do on a Tuesday. Open the language that came out on top — for you or for your partner — and steal something from it this week. Six concrete things per language, all of them small enough to do without planning.</p>
+
+<div class="disclosure-note">Some links below are affiliate links. If you buy through one, we may earn a small commission at no extra cost to you. See our <a href="/affiliate-disclosure.html">Affiliate Disclosure</a> for details.</div>
+
+<div class="lang-panels">
+
+  <details class="lang-panel" id="panel-words">
+    <summary>Words of affirmation</summary>
+    <div class="lang-panel-body">
+      <p>The failure mode here is vagueness. "You're amazing" is pleasant and forgettable; "the way you handled that call with your mum was impressive" is the one they'll still be thinking about at lunch. Specificity is the whole thing.</p>
+      <ul>
+        <li><strong>Name one specific thing before noon.</strong> Not a compliment about them as a person — a compliment about something they actually did. <a href="/articles/thoughtful-gestures-for-your-partner.html#words">More along these lines</a>.</li>
+        <li><strong>Write an actual letter.</strong> If you hate writing, there's a structure that makes it a twenty-minute job rather than a blank-page ordeal — see <a href="/articles/how-to-write-a-love-letter.html">how to write a love letter</a>.</li>
+        <li><strong>Keep decent paper in the house</strong> so leaving a note is a two-minute decision instead of a project. A <a href="https://www.amazon.com/s?k=Peter+Pauper+Press+Letter+Perfect+stationery+set" class="affiliate-link" data-affiliate="love-letter-stationery" target="_blank" rel="noopener sponsored nofollow">Peter Pauper Press Letter Perfect stationery set</a> is a step up from printer paper without tipping into fussy.</li>
+        <li><strong>Use a pen you like.</strong> Sounds trivial; it's the difference between writing notes and meaning to. A <a href="https://www.amazon.com/s?k=LAMY+Safari+fountain+pen" class="affiliate-link" data-affiliate="fountain-pen" target="_blank" rel="noopener sponsored nofollow">LAMY Safari</a> is the usual starting point.</li>
+        <li><strong>Praise them to someone else while they can hear it.</strong> Overheard praise carries differently from praise delivered straight at them, and most people never get any.</li>
+        <li><strong>Put the words on the gift.</strong> The first anniversary is literally paper, which makes it the easiest one to get right for this language — see the <a href="/articles/anniversary-gift-guide-by-year.html#year-1-paper">paper year</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="lang-panel" id="panel-time">
+    <summary>Quality time</summary>
+    <div class="lang-panel-body">
+      <p>Being in the same room does not count and never has. What registers is undivided attention — which is why twenty genuinely focused minutes beats a whole evening spent side by side on two phones.</p>
+      <ul>
+        <li><strong>Put a recurring window in the calendar and defend it</strong> like you'd defend a meeting you can't move. <a href="/articles/budget-date-night-ideas.html#protect-the-time">Why protecting the time matters more than the plan</a>.</li>
+        <li><strong>Pick a date with nothing to look at but each other.</strong> The <a href="/articles/budget-date-night-ideas.html#free-dates">free ones</a> are usually better at this than dinner, where the food does the work.</li>
+        <li><strong>Play something cooperative</strong> so the evening isn't a competition. <a href="https://www.amazon.com/s?k=Codenames+Duet+board+game" class="affiliate-link" data-affiliate="board-game-bundle" target="_blank" rel="noopener sponsored nofollow">Codenames Duet</a> is built for two players on the same side.</li>
+        <li><strong>Keep a deck of questions for when it stalls.</strong> <a href="https://www.amazon.com/s?k=We%27re+Not+Really+Strangers+Couples+Edition+card+game" class="affiliate-link" data-affiliate="couples-question-card-deck" target="_blank" rel="noopener sponsored nofollow">We're Not Really Strangers: Couples Edition</a> gets past the logistics conversation fast.</li>
+        <li><strong>Run a twenty-minute check-in at the same time each week.</strong> There's a format for it in <a href="/articles/relationship-check-in-questions.html">the check-in questions guide</a>.</li>
+        <li><strong>Fix the attention, not the duration.</strong> Phones in another room, one thing at a time — <a href="/articles/thoughtful-gestures-for-your-partner.html#time-and-attention">more on that here</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="lang-panel" id="panel-gifts">
+    <summary>Receiving gifts</summary>
+    <div class="lang-panel-body">
+      <p>This is the most misread of the five and the one people are most embarrassed to score high on. It isn't about money — it's about evidence. A gift proves you were paying attention weeks ago, which is exactly why an £8 thing they mentioned once beats an expensive thing they didn't.</p>
+      <ul>
+        <li><strong>Keep a running note on your phone</strong> of everything they mention wanting. This single habit does more than any amount of shopping. <a href="/articles/thoughtful-gestures-for-your-partner.html#small-gifts">More small-gift ideas</a>.</li>
+        <li><strong>Give small and specific, more often,</strong> rather than saving up for one big correct gesture at Christmas.</li>
+        <li><strong>Turn an ordinary night into an object.</strong> An <a href="https://www.amazon.com/s?k=Fujifilm+Instax+Mini+12+instant+camera" class="affiliate-link" data-affiliate="polaroid-camera" target="_blank" rel="noopener sponsored nofollow">Instax Mini 12</a> makes something they can stick on the fridge.</li>
+        <li><strong>Print the year.</strong> A <a href="https://www.amazon.com/s?k=Mixbook+photo+book+gift+card" class="affiliate-link" data-affiliate="video-doorbell-surprise" target="_blank" rel="noopener sponsored nofollow">Mixbook photo book</a> is the rare gift that gets better the longer you've been together.</li>
+        <li><strong>Let the anniversary material give you a brief.</strong> A constraint beats a blank page — see <a href="/articles/anniversary-gift-guide-by-year.html#by-stage">gifting by relationship stage</a>.</li>
+        <li><strong>If it's three days out and you have nothing,</strong> there's a way to recover that isn't a gift card. <a href="/articles/anniversary-gift-guide-by-year.html#three-days-out">Read this one</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="lang-panel" id="panel-service">
+    <summary>Acts of service</summary>
+    <div class="lang-panel-body">
+      <p>The load-bearing word is <em>unasked</em>. Doing the dishes because you were asked to do the dishes reads as compliance; doing them because you noticed reads as love. Same dishes, completely different message.</p>
+      <ul>
+        <li><strong>Do the one task they've been dreading</strong> — the phone call, the form, the thing that's been on the list for a month. <a href="/articles/thoughtful-gestures-for-your-partner.html#acts-of-service">More of these</a>.</li>
+        <li><strong>Take a recurring chore off them permanently,</strong> not once. Once is a favour; permanently is a change to their week.</li>
+        <li><strong>Remove the "what's for dinner" tax.</strong> A <a href="https://www.amazon.com/s?k=HelloFresh+gift+card" class="affiliate-link" data-affiliate="meal-kit-subscription" target="_blank" rel="noopener sponsored nofollow">HelloFresh gift card</a> lets them pick their own weeks rather than being signed up for something they didn't choose.</li>
+        <li><strong>Plan the date end to end</strong> so they don't have to make a single decision. Start from the <a href="/articles/budget-date-night-ideas.html#under-20">under-$20 list</a> and just book it.</li>
+        <li><strong>Show up during the bad week without being asked.</strong> <a href="/articles/thoughtful-gestures-for-your-partner.html#showing-up">What that looks like in practice</a>.</li>
+        <li><strong>Own the logistics of anything big.</strong> If you're moving, that means the van, the boxes and a <a href="https://www.amazon.com/s?k=BoxOps+Label+Hero+color+coded+moving+labels" class="affiliate-link" data-affiliate="moving-labeling-kit" target="_blank" rel="noopener sponsored nofollow">BoxOps Label Hero labelling kit</a> before they've thought about it.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="lang-panel" id="panel-touch">
+    <summary>Physical touch</summary>
+    <div class="lang-panel-body">
+      <p>Mostly not about sex. It's the hand on the back passing in the kitchen, sitting close instead of across, and the hug that runs a few seconds past automatic. It's also the first thing to quietly disappear during a stressful stretch, which is exactly when it's most missed.</p>
+      <ul>
+        <li><strong>Hold on a beat longer at the door,</strong> both leaving and arriving. It costs nothing and it's the one people notice stopping. <a href="/articles/thoughtful-gestures-for-your-partner.html#physical-affection">More like this</a>.</li>
+        <li><strong>Touch in passing.</strong> A hand on the shoulder on the way to the kettle registers more than a scheduled cuddle.</li>
+        <li><strong>Make the couch worth staying on.</strong> A <a href="https://www.amazon.com/s?k=YnM+Weighted+Blanket" class="affiliate-link" data-affiliate="weighted-blanket" target="_blank" rel="noopener sponsored nofollow">YnM weighted blanket</a> turns "watching something" into staying put under the same blanket.</li>
+        <li><strong>Trade massages instead of booking a spa.</strong> A proper multi-piece set like the <a href="https://www.amazon.com/s?k=Farmers+Body+Spa+Day+at+Home+Gift+Set" class="affiliate-link" data-affiliate="spa-gift-set" target="_blank" rel="noopener sponsored nofollow">Farmers Body Spa Day at Home set</a> makes it feel like an occasion rather than a stocking filler.</li>
+        <li><strong>Build the date around being close.</strong> One blanket, one <a href="https://www.amazon.com/s?k=Picnic+at+Ascot+insulated+picnic+backpack+for+two" class="affiliate-link" data-affiliate="picnic-set" target="_blank" rel="noopener sponsored nofollow">Picnic at Ascot backpack for two</a>, somewhere with a view.</li>
+        <li><strong>Watch for the drop-off under stress.</strong> When the week is hard, this is the first thing to go — the <a href="/articles/budget-date-night-ideas.html#under-50">under-$50 dates</a> are mostly built for sitting close.</li>
+      </ul>
+    </div>
+  </details>
+
+</div>
+
+<h2>How this quiz is scored</h2>
+<p>Five languages make ten possible head-to-head pairings. Each pairing comes up three times, which is where the 30 questions come from, and it means every language is offered exactly 12 times across the quiz. Your score for a language is simply how many of those 12 chances you took, and the five scores always total 30. Nothing is weighted and no answer is worth more than another — the balance is the entire design, because an unbalanced item set would hand the win to whichever language got asked about most.</p>
+<p>The questions are situations rather than statements, and they're deliberately concrete: a bad week, a doorway, a Sunday morning with nothing on. Abstract self-assessment ("I value verbal appreciation") tends to measure what people believe about themselves. Asking what they'd actually pick on a specific evening measures something closer to the truth.</p>
+
+<h2>What the result is and isn't</h2>
+<p>It's a conversation starter with numbers attached. It is not a diagnosis, a personality type, or a fixed fact about you. As <a href="/articles/five-love-languages-explained.html">our longer piece on the framework</a> goes into, the five-languages model came out of decades of counselling practice rather than controlled research, and attempts to test it since haven't found strong support for people sorting neatly into one primary category. Hold the result loosely.</p>
+<p>What it's genuinely good for is the gap. If your partner scores 11 on a language you score 2 on, you have found — in about eight minutes, without an argument — the exact reason a kind thing you keep doing isn't landing. That's worth more than the label on top.</p>
+<p>One honest caveat about the ranking: with 12 chances per language, a one- or two-point difference is noise. If two languages come out within two points of each other, treat them as tied rather than ordered.</p>
+
+<section class="related-articles">
+<h2>You might also like</h2>
+<ul>
+<li><a href="/articles/five-love-languages-explained.html">The 5 Love Languages, Explained (With Gift &amp; Date Ideas for Each)</a></li>
+<li><a href="/articles/thoughtful-gestures-for-your-partner.html">50 Thoughtful Gestures for Your Partner</a></li>
+<li><a href="/articles/relationship-check-in-questions.html">Relationship Check-In Questions: A Simple Weekly &amp; Monthly Guide</a></li>
+<li><a href="/articles/how-to-argue-better.html">How to Argue Better: Fair-Fighting Rules for Couples</a></li>
+</ul>
+</section>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Lovestruck.us — Helping you love better, one date at a time.</p>
+    <p><a href="/affiliate-disclosure.html">Affiliate Disclosure</a> &middot; <a href="/privacy-policy.html">Privacy Policy</a> &middot; <a href="/about.html">About</a></p>
+  </div>
+</footer>
+
+<script>
+/* Lovestruck.us — love languages quiz.
+ *
+ * Everything is in this file. No network, no storage beyond sessionStorage,
+ * no dependency. The three things that need to be right:
+ *
+ *  1. The item set is BALANCED. Five languages give ten unordered pairs;
+ *     each pair appears exactly three times, so each language is offered
+ *     exactly 12 times and the five scores always sum to 30. If you edit
+ *     ITEMS, keep that true or the ranking silently favours whatever gets
+ *     asked about most. checkBalance() below asserts it in the console.
+ *
+ *  2. The share hash is the permalink. "#r=8-6-5-4-7" is words-time-gifts-
+ *     service-touch, in that order, and "&p=..." carries a second person's
+ *     scores. Both are validated on the way in: five integers, each 0..12,
+ *     summing to 30. Anything else is ignored rather than half-rendered.
+ *
+ *  3. Answers persist in sessionStorage under LS_KEY, so leaving the page
+ *     for an outbound link and coming back on the browser's back button
+ *     resumes rather than restarting.
+ */
+(function () {
+  "use strict";
+
+  var LANGS = [
+    { key: "words",   name: "Words of affirmation", panel: "panel-words" },
+    { key: "time",    name: "Quality time",         panel: "panel-time" },
+    { key: "gifts",   name: "Receiving gifts",      panel: "panel-gifts" },
+    { key: "service", name: "Acts of service",      panel: "panel-service" },
+    { key: "touch",   name: "Physical touch",       panel: "panel-touch" }
+  ];
+
+  var W = 0, T = 1, G = 2, S = 3, P = 4;
+  var MAX_PER_LANG = 12;
+  var TOTAL = 30;
+
+  /* 30 items, three per pairing. a/b are [languageIndex, text]. */
+  var ITEMS = [
+    { s: "It's Friday and you've both had a week of it.",
+      p: "One of these is going to happen. Which do you want?",
+      a: [W, "Them telling you, in detail, the one thing you did this week they thought was impressive."],
+      b: [T, "Two hours with both phones in another room and nowhere either of you has to be."] },
+    { s: "They're away for work and there's time for exactly one thing tonight.",
+      p: "Which do you pick?",
+      a: [W, "A long voice message about what they miss about you."],
+      b: [T, "A video call where you cook dinner together over the screen and talk about nothing."] },
+    { s: "You just finished something that took you months.",
+      p: "What would make it feel actually celebrated?",
+      a: [W, "Them saying out loud, specifically, why they're proud of you."],
+      b: [T, "Them clearing a whole evening to hear the entire story, start to finish."] },
+
+    { s: "It's your birthday and there's one thing on the table.",
+      p: "Which would you rather it be?",
+      a: [W, "A card with a full page of their handwriting in it and nothing else."],
+      b: [G, "A small unwrapped thing they picked up because it made them think of you."] },
+    { s: "You've had an argument and they want to fix it.",
+      p: "What repairs it faster?",
+      a: [W, "A real apology that names exactly what they got wrong."],
+      b: [G, "Coming home with the specific thing you mentioned wanting last week."] },
+    { s: "Nothing special about today. It's a Tuesday.",
+      p: "Which would you notice more?",
+      a: [W, "A text out of nowhere saying something kind about you."],
+      b: [G, "A book left on your pillow with a page already turned down for you."] },
+
+    { s: "You're behind on everything and it shows.",
+      p: "What actually helps?",
+      a: [W, "Them telling you that you're carrying more than anyone realises."],
+      b: [S, "Them quietly doing the one job you've been avoiding all week."] },
+    { s: "You've been ill for three days.",
+      p: "What do you remember about it afterwards?",
+      a: [W, "How often they checked in, and that they said they were worried."],
+      b: [S, "That the kitchen stayed clean and there was always something to eat."] },
+    { s: "Tomorrow is the thing you've been dreading for a month.",
+      p: "What steadies you tonight?",
+      a: [W, "Them saying they've watched you do harder things than this."],
+      b: [S, "Them taking everything else off your plate so tomorrow is only the one thing."] },
+
+    { s: "Something's wrong and you can't quite put it into words yet.",
+      p: "What do you want them to do?",
+      a: [W, "Say the thing you're feeling out loud, before you've managed to."],
+      b: [P, "Sit down beside you and put a hand on your back."] },
+    { s: "They walk through the door after a week away.",
+      p: "Which version of that moment do you want?",
+      a: [W, "Them stopping in the doorway to tell you how much they missed you."],
+      b: [P, "Them crossing the room and not letting go for a while."] },
+    { s: "You did something small and thoughtful for them.",
+      p: "How do you want it received?",
+      a: [W, "Them telling you, out loud, that they noticed."],
+      b: [P, "Them pulling you in without saying anything at all."] },
+
+    { s: "It's your anniversary and there's budget for one of these.",
+      p: "Which?",
+      a: [T, "A whole day off together with absolutely nothing planned."],
+      b: [G, "Something they clearly spent weeks tracking down for you."] },
+    { s: "They've been travelling without you and they're back tonight.",
+      p: "What would you rather they came home with?",
+      a: [T, "An evening where they walk you through the entire trip, properly."],
+      b: [G, "One odd, specific thing from a market somewhere that they knew you'd love."] },
+    { s: "Christmas morning, and you get to choose how it goes.",
+      p: "Which sounds better?",
+      a: [T, "Nobody leaves the house, nobody looks at a phone, all day."],
+      b: [G, "A small pile of things, each chosen for a reason they'll explain as you open it."] },
+
+    { s: "It's Saturday and the flat is a state.",
+      p: "What would you rather have?",
+      a: [T, "Leave it. Go out together and deal with it on Monday."],
+      b: [S, "They handle it while you rest, and it's finished by lunchtime."] },
+    { s: "New baby. Nobody has slept. Everything is hard.",
+      p: "What gets you through the week?",
+      a: [T, "Twenty minutes at the end of each day that belong to just the two of you."],
+      b: [S, "Waking up to find the bottles washed and the laundry already done."] },
+    { s: "You're moving house next weekend.",
+      p: "What do you most want from them?",
+      a: [T, "Them there for the whole thing, including the boring parts."],
+      b: [S, "Them having already booked the van, the boxes and the end-of-tenancy clean."] },
+
+    { s: "Sunday morning. Nothing on, nowhere to be.",
+      p: "Which is the better version?",
+      a: [T, "Coffee and a conversation that accidentally runs two hours."],
+      b: [P, "Staying in bed, tangled up, not talking much."] },
+    { s: "You're watching a film together.",
+      p: "Which detail matters more to you?",
+      a: [T, "That neither of you looks at a phone the whole way through."],
+      b: [P, "That you're under the same blanket, leaning on each other."] },
+    { s: "You're at a party where you know nobody.",
+      p: "What do you want from them?",
+      a: [T, "Them staying beside you and actually talking to you all night."],
+      b: [P, "Their hand finding yours every time they pass."] },
+
+    { s: "You've mentioned twice that your commute is grim.",
+      p: "Which response lands?",
+      a: [G, "They buy you the good headphones you kept not buying for yourself."],
+      b: [S, "They start driving you in on the two worst mornings of the week."] },
+    { s: "Your car needs sorting and your birthday is the same week.",
+      p: "They can do one. Which?",
+      a: [G, "A wrapped present, chosen carefully, on the day."],
+      b: [S, "The car quietly dealt with, and no present."] },
+    { s: "You're hosting a dinner and you're stressed about it.",
+      p: "How would you rather they turned up?",
+      a: [G, "With flowers and the wine you actually like."],
+      b: [S, "Two hours early, already chopping."] },
+
+    { s: "Long day, and you're completely flat.",
+      p: "Which would lift it?",
+      a: [G, "A small thing waiting on the counter that they picked up for you."],
+      b: [P, "A hug that goes on longer than it needs to."] },
+    { s: "Valentine's Day, and they can only get one thing right.",
+      p: "Which one?",
+      a: [G, "A gift that proves they were listening back in November."],
+      b: [P, "An evening where you barely stop touching."] },
+    { s: "You've just had bad news and they're trying to help.",
+      p: "What do you want them to do?",
+      a: [G, "Go out and come back with the thing that always helps."],
+      b: [P, "Not go anywhere. Arm around you, for as long as it takes."] },
+
+    { s: "You get home wrecked.",
+      p: "What's the better welcome?",
+      a: [S, "Dinner already made and the dishwasher already emptied."],
+      b: [P, "Them meeting you at the door and holding on."] },
+    { s: "You've been ill for a week and you're finally upright.",
+      p: "What did you need most while it was happening?",
+      a: [S, "Someone keeping the whole house running without being asked."],
+      b: [P, "Someone lying next to you through the worst of it."] },
+    { s: "A hard conversation has just ended, and not well.",
+      p: "What do you want to happen next?",
+      a: [S, "Them making tea and quietly fixing something you'd left undone."],
+      b: [P, "Them reaching for you before either of you says anything else."] }
+  ];
+
+  /* Copy shown when a language comes out on top. */
+  var TOP_COPY = {
+    words: "Being told, in words, is what makes it real for you. That's a genuinely hard one to be partnered with if the other person grew up somewhere love was demonstrated rather than announced — they may be saying it constantly in ways you're not counting. Worth telling them plainly: specific and out loud beats implied.",
+    time: "Attention is the currency. Not hours — attention. This is the language most damaged by ordinary modern life, because it's the only one a phone can quietly cancel while everybody is technically present in the room. The fix is smaller than people expect and harder than it sounds: twenty minutes with nothing else running.",
+    gifts: "You read gifts as evidence, not as things. What's actually being measured is whether someone was paying attention weeks before the occasion, which is why a cheap and specific thing lands and an expensive generic one doesn't. Say this part out loud to your partner — it's the language most often mistaken for materialism, including by the people who score high on it.",
+    service: "Effort spent on your behalf is what reads as love. The word doing the work is <em>unasked</em>: the same task done after a reminder registers as compliance and doesn't count. If your partner is asking what they can do, the honest answer is that being asked is half the problem — which is worth explaining rather than resenting.",
+    touch: "Closeness is the channel. Mostly not sex — the hand in passing, sitting against each other, the hug that runs long. This is the first language to disappear during a stressful stretch, and because it goes quietly, both people can miss that it's gone. If a hard season has started, this is the one to name early."
+  };
+
+  var LS_KEY = "lovestruck.lovelanguages.v1";
+
+  var state = {
+    who: "you",            /* "you" | "partner" */
+    idx: 0,
+    you: new Array(TOTAL).fill(null),
+    partner: null,          /* array once the partner run begins */
+    sharedOnly: false       /* arrived on a link, haven't taken it here */
+  };
+
+  /* ---------- helpers ---------- */
+
+  function $(id) { return document.getElementById(id); }
+  function show(el) { el.classList.remove("q-hidden"); }
+  function hide(el) { el.classList.add("q-hidden"); }
+
+  function scoresFrom(answers) {
+    var out = [0, 0, 0, 0, 0];
+    for (var i = 0; i < TOTAL; i++) {
+      var pick = answers[i];
+      if (pick !== "a" && pick !== "b") continue;
+      out[ITEMS[i][pick][0]]++;
+    }
+    return out;
+  }
+
+  function complete(answers) {
+    if (!answers) return false;
+    for (var i = 0; i < TOTAL; i++) {
+      if (answers[i] !== "a" && answers[i] !== "b") return false;
+    }
+    return true;
+  }
+
+  function encode(scores) { return scores.join("-"); }
+
+  /* Five integers, each within range, summing to 30. Anything else is not a
+     result this quiz could have produced, so it is rejected outright rather
+     than rendered as a misleading half-result. */
+  function decode(str) {
+    if (!str) return null;
+    var parts = String(str).split("-");
+    if (parts.length !== 5) return null;
+    var out = [], sum = 0;
+    for (var i = 0; i < 5; i++) {
+      if (!/^\d{1,2}$/.test(parts[i])) return null;
+      var n = parseInt(parts[i], 10);
+      if (n < 0 || n > MAX_PER_LANG) return null;
+      out.push(n); sum += n;
+    }
+    return sum === TOTAL ? out : null;
+  }
+
+  function readHash() {
+    var h = window.location.hash.replace(/^#/, "");
+    if (!h) return { r: null, p: null };
+    var r = null, p = null;
+    h.split("&").forEach(function (chunk) {
+      var eq = chunk.indexOf("=");
+      if (eq < 0) return;
+      var k = chunk.slice(0, eq), v = chunk.slice(eq + 1);
+      if (k === "r") r = decode(v);
+      if (k === "p") p = decode(v);
+    });
+    return { r: r, p: p };
+  }
+
+  function baseUrl() {
+    return window.location.origin + window.location.pathname;
+  }
+
+  function shareLink(mine, theirs) {
+    var u = baseUrl() + "#r=" + encode(mine);
+    if (theirs) u += "&p=" + encode(theirs);
+    return u;
+  }
+
+  function save() {
+    try {
+      sessionStorage.setItem(LS_KEY, JSON.stringify({
+        who: state.who, idx: state.idx, you: state.you, partner: state.partner
+      }));
+    } catch (e) { /* private mode, or storage full. The quiz still works. */ }
+  }
+
+  function restore() {
+    var raw;
+    try { raw = sessionStorage.getItem(LS_KEY); } catch (e) { return false; }
+    if (!raw) return false;
+    var d;
+    try { d = JSON.parse(raw); } catch (e) { return false; }
+    if (!d || !Array.isArray(d.you) || d.you.length !== TOTAL) return false;
+    state.you = d.you;
+    state.partner = (Array.isArray(d.partner) && d.partner.length === TOTAL) ? d.partner : null;
+    state.who = d.who === "partner" ? "partner" : "you";
+    state.idx = (typeof d.idx === "number" && d.idx >= 0 && d.idx < TOTAL) ? d.idx : 0;
+    return true;
+  }
+
+  function clearSaved() {
+    try { sessionStorage.removeItem(LS_KEY); } catch (e) {}
+  }
+
+  function current() { return state.who === "partner" ? state.partner : state.you; }
+
+  /* ---------- rendering ---------- */
+
+  var panes = {};
+
+  function showPane(name) {
+    ["Intro", "Quiz", "Result", "Compare"].forEach(function (n) {
+      if (n === name) show(panes[n]); else hide(panes[n]);
+    });
+  }
+
+  function renderQuestion() {
+    var answers = current();
+    var item = ITEMS[state.idx];
+    $("whoChip").textContent = state.who === "partner" ? "your partner" : "you";
+    $("qCount").textContent = "Question " + (state.idx + 1) + " of " + TOTAL;
+
+    var done = 0;
+    for (var i = 0; i < TOTAL; i++) { if (answers[i]) done++; }
+    var pct = Math.round((done / TOTAL) * 100);
+    $("qPct").textContent = pct + "%";
+    $("qFill").style.width = pct + "%";
+
+    $("qScene").textContent = item.s;
+    $("qPrompt").textContent = item.p;
+
+    var a = $("optA"), b = $("optB");
+    a.textContent = item.a[1];
+    b.textContent = item.b[1];
+    a.setAttribute("aria-pressed", answers[state.idx] === "a" ? "true" : "false");
+    b.setAttribute("aria-pressed", answers[state.idx] === "b" ? "true" : "false");
+    $("btnPrev").disabled = state.idx === 0;
+  }
+
+  function ranked(scores) {
+    return LANGS.map(function (l, i) { return { i: i, name: l.name, key: l.key, panel: l.panel, n: scores[i] }; })
+                .sort(function (x, y) { return y.n - x.n || x.i - y.i; });
+  }
+
+  function barsHtml(scores) {
+    var rows = ranked(scores);
+    var top = rows[0].n;
+    return rows.map(function (r) {
+      var w = Math.round((r.n / MAX_PER_LANG) * 100);
+      var isTop = r.n === top && top > 0;
+      return '<div class="q-bar-row' + (isTop ? " is-top" : "") + '">' +
+          '<div class="q-bar-label">' +
+            '<span class="q-bar-name"><a href="#' + r.panel + '">' + r.name + '</a></span>' +
+            '<span class="q-bar-score">' + r.n + ' of 12</span>' +
+          '</div>' +
+          '<div class="q-bar-track"><span class="q-bar-fill" style="width:' + w + '%"></span></div>' +
+        '</div>';
+    }).join("");
+  }
+
+  function narrativeHtml(scores) {
+    var rows = ranked(scores);
+    var top = rows[0], second = rows[1], bottom = rows[4];
+    var html = "";
+
+    var tiedTop = rows.filter(function (r) { return r.n === top.n; });
+    var head, body;
+
+    if (tiedTop.length > 1) {
+      var names = tiedTop.map(function (r) { return r.name.toLowerCase(); });
+      head = "It's a tie: " + names.slice(0, -1).join(", ") + " and " + names[names.length - 1];
+      body = "<p>Nothing separated these, which happens and isn't a failed result — it means you'd take any of them and the situation decides. Read all of the tied panels below and pick whichever one your partner is currently least likely to guess.</p>";
+    } else {
+      head = "Top of your list: " + top.name.toLowerCase();
+      body = "<p>" + TOP_COPY[top.key] + "</p>";
+      if (top.n - second.n <= 2) {
+        body += "<p><strong>Close behind:</strong> " + second.name.toLowerCase() + ", " +
+                (top.n - second.n === 0 ? "level with it" : "just " + (top.n - second.n) + " point" + (top.n - second.n === 1 ? "" : "s") + " behind") +
+                ". With 12 chances per language that gap is inside the noise, so treat the two as a pair rather than a ranking.</p>";
+      }
+    }
+
+    if (bottom.n <= 2) {
+      body += "<p><strong>Bottom of the list:</strong> " + bottom.name.toLowerCase() +
+              ", at " + bottom.n + " of 12. That doesn't mean you dislike it — it means it lost almost every time it was up against something else. It's the one you're most likely to under-give, because it's the one you'd least miss.</p>";
+    }
+
+    return '<div class="q-callout"><h3>' + head + "</h3>" + body + "</div>";
+  }
+
+  function renderResult(scores, opts) {
+    opts = opts || {};
+    $("resHead").textContent = opts.shared ? "Their results" : "Your results";
+    $("resSub").textContent = opts.shared
+      ? "Scores out of 12 for each language, as they came in on the link."
+      : "Scores out of 12 for each language, ranked.";
+    $("resBars").innerHTML = barsHtml(scores);
+    $("resNarrative").innerHTML = narrativeHtml(scores);
+    $("shareUrl").value = shareLink(scores, null);
+    hide($("copiedMsg"));
+    $("btnPartner").textContent = opts.shared ? "Take the quiz yourself" : "Take it again as your partner";
+    if (opts.shared) { hide($("resShare")); } else { show($("resShare")); }
+    showPane("Result");
+  }
+
+  function cmpBarsHtml(mine, theirs) {
+    return LANGS.map(function (l, i) {
+      var mw = Math.round((mine[i] / MAX_PER_LANG) * 100);
+      var tw = Math.round((theirs[i] / MAX_PER_LANG) * 100);
+      return '<div class="q-cmp-row">' +
+        '<div class="q-cmp-name">' + l.name + "</div>" +
+        '<div class="q-cmp-line"><span class="q-cmp-who">you</span>' +
+          '<span class="q-cmp-track"><span class="q-cmp-fill mine" style="width:' + mw + '%"></span></span>' +
+          '<span class="q-cmp-num">' + mine[i] + "</span></div>" +
+        '<div class="q-cmp-line"><span class="q-cmp-who">partner</span>' +
+          '<span class="q-cmp-track"><span class="q-cmp-fill theirs" style="width:' + tw + '%"></span></span>' +
+          '<span class="q-cmp-num">' + theirs[i] + "</span></div>" +
+      "</div>";
+    }).join("");
+  }
+
+  function cmpInsightHtml(mine, theirs) {
+    /* The useful output is not "you matched 3 of 5". It is the largest
+       asymmetry in each direction: the language they want that you rank
+       low, and the reverse. That is the pair of sentences worth reading. */
+    var gaps = LANGS.map(function (l, i) {
+      return { name: l.name, panel: l.panel, mine: mine[i], theirs: theirs[i], d: theirs[i] - mine[i] };
+    });
+    var theyWant = gaps.slice().sort(function (a, b) { return b.d - a.d; })[0];
+    var youWant  = gaps.slice().sort(function (a, b) { return a.d - b.d; })[0];
+
+    var html = "";
+
+    if (theyWant.d >= 3) {
+      html += '<div class="q-callout"><h3>The gap worth acting on</h3>' +
+        "<p>They scored " + theyWant.theirs + " on <strong>" + theyWant.name.toLowerCase() +
+        "</strong> where you scored " + theyWant.mine + ". That is the widest gap between you, and it is the most likely reason something kind you already do isn't landing the way you intend. " +
+        '<a href="#' + theyWant.panel + '">Six things to try</a>.</p>';
+      if (youWant.d <= -3) {
+        html += "<p>It runs the other way too: you scored " + youWant.mine + " on <strong>" +
+          youWant.name.toLowerCase() + "</strong> against their " + youWant.theirs +
+          ". Neither of you is wrong — you're just each fluent in something the other doesn't hear as loudly.</p>";
+      }
+      html += "</div>";
+    } else {
+      var biggest = Math.max(Math.abs(theyWant.d), Math.abs(youWant.d));
+      html += '<div class="q-callout"><h3>You two are unusually close</h3>' +
+        "<p>No language differs by more than " + biggest + " point" + (biggest === 1 ? "" : "s") +
+        " between you, which makes this the easy version: what you'd naturally give is roughly what they'd want to receive. Worth checking the bottom of both lists rather than the top — a language you <em>both</em> rank low is one neither of you is giving.</p></div>";
+    }
+
+    return html;
+  }
+
+  function renderCompare(mine, theirs) {
+    $("cmpSub").textContent = "Both sets of scores, out of 12 per language.";
+    $("cmpBars").innerHTML = cmpBarsHtml(mine, theirs);
+    $("cmpInsight").innerHTML = cmpInsightHtml(mine, theirs);
+    $("cmpShareUrl").value = shareLink(mine, theirs);
+    hide($("copiedMsg2"));
+    showPane("Compare");
+  }
+
+  /* ---------- flow ---------- */
+
+  function answer(pick) {
+    var answers = current();
+    answers[state.idx] = pick;
+    save();
+    if (state.idx < TOTAL - 1) {
+      state.idx++;
+      save();
+      renderQuestion();
+      window.scrollTo({ top: panes.Quiz.offsetTop - 70, behavior: "smooth" });
+    } else if (complete(answers)) {
+      finish();
+    } else {
+      /* Last item answered but something earlier is still blank (only
+         reachable via Previous). Jump to the first gap rather than
+         scoring an incomplete run. */
+      for (var i = 0; i < TOTAL; i++) {
+        if (!answers[i]) { state.idx = i; break; }
+      }
+      save();
+      renderQuestion();
+    }
+  }
+
+  /* Writing our own result into the hash fires hashchange, and routing on
+     that would re-render what we have just rendered. Suppress the echo, but
+     leave every other hash change routed — a reader arriving on a shared
+     link, or pressing back out of their own result, has to get the view the
+     URL now describes rather than a stale pane. */
+  var suppressHashRoute = false;
+  /* Put the hash back on the URL without adding a history entry, so the
+     address bar still describes what is on screen after a back press that
+     landed on a stored result. replaceState fires no hashchange, so this
+     cannot loop. */
+  function stampHash(h) {
+    if (("#" + h) === window.location.hash) return;
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", baseUrl() + "#" + h);
+    }
+  }
+
+  function setHash(h) {
+    if (("#" + h) === window.location.hash) return;
+    suppressHashRoute = true;
+    window.location.hash = h;
+    setTimeout(function () { suppressHashRoute = false; }, 0);
+  }
+
+  function finish() {
+    save();
+    if (state.who === "partner" && complete(state.you) && complete(state.partner)) {
+      renderCompare(scoresFrom(state.you), scoresFrom(state.partner));
+      setHash("r=" + encode(scoresFrom(state.you)) + "&p=" + encode(scoresFrom(state.partner)));
+    } else {
+      renderResult(scoresFrom(state.you), {});
+      setHash("r=" + encode(scoresFrom(state.you)));
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function beginRun(who) {
+    state.who = who;
+    if (who === "partner") {
+      state.partner = new Array(TOTAL).fill(null);
+    } else {
+      state.you = new Array(TOTAL).fill(null);
+      state.partner = null;
+    }
+    state.idx = 0;
+    state.sharedOnly = false;
+    save();
+    renderQuestion();
+    showPane("Quiz");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function reset() {
+    clearSaved();
+    state.who = "you";
+    state.idx = 0;
+    state.you = new Array(TOTAL).fill(null);
+    state.partner = null;
+    state.sharedOnly = false;
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", baseUrl());
+    } else {
+      window.location.hash = "";
+    }
+    hide($("sharedBanner"));
+    showPane("Intro");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function copyInto(inputId, msgId) {
+    var input = $(inputId);
+    input.focus();
+    input.setSelectionRange(0, input.value.length);
+    var done = function () { show($(msgId)); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(input.value).then(done, function () {
+        try { document.execCommand("copy"); done(); } catch (e) {}
+      });
+    } else {
+      try { document.execCommand("copy"); done(); } catch (e) {}
+    }
+  }
+
+  /* ---------- boot ---------- */
+
+  function checkBalance() {
+    var counts = [0, 0, 0, 0, 0];
+    var pairs = {};
+    ITEMS.forEach(function (it) {
+      counts[it.a[0]]++; counts[it.b[0]]++;
+      var k = [it.a[0], it.b[0]].sort().join("");
+      pairs[k] = (pairs[k] || 0) + 1;
+    });
+    var ok = ITEMS.length === TOTAL &&
+             counts.every(function (c) { return c === MAX_PER_LANG; }) &&
+             Object.keys(pairs).length === 10 &&
+             Object.keys(pairs).every(function (k) { return pairs[k] === 3; });
+    if (!ok) {
+      console.error("[lovestruck] quiz item set is unbalanced", { counts: counts, pairs: pairs });
+    }
+    return ok;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    panes.Intro = $("paneIntro");
+    panes.Quiz = $("paneQuiz");
+    panes.Result = $("paneResult");
+    panes.Compare = $("paneCompare");
+
+    checkBalance();
+
+    $("btnStart").addEventListener("click", function () { beginRun("you"); });
+    $("optA").addEventListener("click", function () { answer("a"); });
+    $("optB").addEventListener("click", function () { answer("b"); });
+    $("btnPrev").addEventListener("click", function () {
+      if (state.idx > 0) { state.idx--; save(); renderQuestion(); }
+    });
+    $("btnQuit").addEventListener("click", reset);
+    $("btnRetake").addEventListener("click", reset);
+    $("btnRetake2").addEventListener("click", reset);
+    $("btnCopy").addEventListener("click", function () { copyInto("shareUrl", "copiedMsg"); });
+    $("btnCopy2").addEventListener("click", function () { copyInto("cmpShareUrl", "copiedMsg2"); });
+    $("startFromShare").addEventListener("click", function () {
+      hide($("sharedBanner"));
+      beginRun("you");
+    });
+    $("btnPartner").addEventListener("click", function () {
+      if (state.sharedOnly) { hide($("sharedBanner")); beginRun("you"); }
+      else { beginRun("partner"); }
+    });
+
+    /* Open the matching panel when a result links into one. */
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#panel-"]');
+      if (!a) return;
+      var el = document.getElementById(a.getAttribute("href").slice(1));
+      if (el) { el.open = true; }
+    });
+
+    route(true);
+
+    window.addEventListener("hashchange", function () {
+      if (suppressHashRoute) return;
+      route(false);
+    });
+  });
+
+  /* The single place that decides which pane the current URL plus the
+     current sessionStorage should be showing. Called once on load and again
+     on every hash change we did not cause ourselves, so back and forward
+     move between the intro, a result and a comparison the way a reader
+     expects a URL to. */
+  function route(firstLoad) {
+    var hash = readHash();
+    var resumed = firstLoad ? restore() : (complete(state.you) || (current() || []).some(Boolean));
+
+    hide($("sharedBanner"));
+
+    if (hash.r && hash.p) {
+      /* A full comparison link. Rendered from the hash, because it is a
+         permalink to two results and not necessarily a run taken here. */
+      state.sharedOnly = !(complete(state.you) && state.partner && complete(state.partner) &&
+                           encode(scoresFrom(state.you)) === encode(hash.r));
+      renderCompare(hash.r, hash.p);
+      return;
+    }
+
+    if (hash.r) {
+      if (resumed && complete(state.you) && encode(scoresFrom(state.you)) === encode(hash.r)) {
+        /* Our own result, arrived at again via back, forward or a reload. */
+        state.sharedOnly = false;
+        if (state.partner && complete(state.partner)) {
+          renderCompare(scoresFrom(state.you), scoresFrom(state.partner));
+        } else {
+          renderResult(hash.r, {});
+        }
+      } else {
+        state.sharedOnly = true;
+        show($("sharedBanner"));
+        renderResult(hash.r, { shared: true });
+      }
+      return;
+    }
+
+    /* No usable hash: either it was never there, or it was malformed and
+       decode() rejected it. Fall back to whatever this browser was doing. */
+    if (resumed) {
+      if (state.who === "partner" && state.partner && complete(state.partner) && complete(state.you)) {
+        renderCompare(scoresFrom(state.you), scoresFrom(state.partner));
+        stampHash("r=" + encode(scoresFrom(state.you)) + "&p=" + encode(scoresFrom(state.partner)));
+      } else if (state.who === "you" && complete(state.you)) {
+        renderResult(scoresFrom(state.you), {});
+        stampHash("r=" + encode(scoresFrom(state.you)));
+      } else if (current() && current().some(Boolean)) {
+        renderQuestion();
+        showPane("Quiz");
+      } else {
+        showPane("Intro");
+      }
+      return;
+    }
+
+    showPane("Intro");
+  }
+})();
+</script>
+
+</body>
+</html>

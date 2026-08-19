@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lovestruck.us/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://lovestruck.us/quiz/love-languages/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://lovestruck.us/articles/budget-date-night-ideas.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lovestruck.us/articles/anniversary-gift-guide-by-year.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -32,7 +38,7 @@
   </url>
   <url>
     <loc>https://lovestruck.us/articles/thoughtful-gestures-for-your-partner.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -44,7 +50,7 @@
   </url>
   <url>
     <loc>https://lovestruck.us/articles/five-love-languages-explained.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
