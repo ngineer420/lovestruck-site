@@ -35,7 +35,14 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "affiliate-links.json"
-ARTICLES = ROOT / "articles"
+
+# Every glob that may contain an affiliate anchor. This used to be the
+# articles directory alone, which quietly stopped being the whole story the
+# moment /quiz/ shipped affiliate links of its own: an anchor outside the
+# glob is invisible to this script, so editing its "url" in the JSON has no
+# effect and the two drift apart with nothing reporting it. Add a glob here
+# whenever a new directory starts carrying data-affiliate anchors.
+SOURCE_GLOBS = ("articles/*.html", "quiz/*/index.html")
 
 # Matches an affiliate anchor's opening tag whether or not it has an href,
 # so a regressed href-less anchor is repaired rather than skipped.
@@ -57,7 +64,8 @@ def main():
     repaired = 0
     missing_keys = set()
 
-    for path in sorted(ARTICLES.glob("*.html")):
+    paths = sorted({p for glob in SOURCE_GLOBS for p in ROOT.glob(glob)})
+    for path in paths:
         text = path.read_text()
 
         def rewrite(match):
